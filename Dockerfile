@@ -37,13 +37,13 @@ RUN flutter upgrade
 RUN flutter doctor -v
 
 #Copy project
-WORKDIR /home/developer/workspace/app
+WORKDIR /home/developer/workspace/store_flutter
 COPY . .
 
 #Change project owner
 WORKDIR /home/developer/workspace
-RUN sudo chown -R developer app
+RUN sudo chown -R developer store_flutter
 
 #Install dependencies
-WORKDIR /home/developer/workspace/app
+WORKDIR /home/developer/workspace/store_flutter
 RUN flutter pub get

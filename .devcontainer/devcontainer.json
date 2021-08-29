@@ -3,11 +3,8 @@
   "context": "..",
   "dockerFile": "../Dockerfile",
   "remoteUser": "developer",
-  "settings": {
-    "terminal.integrated.shell.linux": null
-  },
   "runArgs": ["--privileged"],
   "extensions": ["dart-code.flutter"],
-  "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/home/developer/workspace,type=bind,consistency=delegated",
-  "workspaceFolder": "/home/developer/workspace"
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/developer/workspace/store_flutter,type=bind,consistency=delegated",
+  "workspaceFolder": "/home/developer/workspace/store_flutter"
 }
