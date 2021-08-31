@@ -33,9 +33,6 @@ ENV PATH "$PATH:/home/developer/flutter/bin"
 RUN flutter channel stable
 RUN flutter upgrade
 
-# Run basic check to download Dark SDK
-RUN flutter doctor -v
-
 #Copy project
 WORKDIR /home/developer/workspace/store_flutter
 COPY . .
@@ -47,3 +44,13 @@ RUN sudo chown -R developer store_flutter
 #Install dependencies
 WORKDIR /home/developer/workspace/store_flutter
 RUN flutter pub get
+
+#Install chrome and remove
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN sudo apt install ./google-chrome-stable_current_amd64.deb -y
+RUN rm -f ./google-chrome-stable_current_amd64.deb
+
+# Run basic check to download Dark SDK
+RUN flutter doctor -v
+
+EXPOSE 1234
