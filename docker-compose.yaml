@@ -3,6 +3,8 @@ services:
   frontend:
     image: img_store_flutter
     container_name: con_store_flutter
+    volumes:
+      - .:/home/developer/workspace/store_flutter
     ports:
       - 1234:1234
-    command: ["flutter", "run", "-d", "web-server", "--web-port=1234"]
+    # command: ["flutter", "run", "-d", "web-server", "--web-port=1234"]

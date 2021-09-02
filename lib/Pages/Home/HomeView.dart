@@ -1,6 +1,8 @@
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:store/utils/ChangeLenguage.dart';
+import 'package:store/widgets/NavBar/NavBar.dart';
+import 'package:store/widgets/NavBar/NavBarView.dart';
 
 class View extends StatelessWidget {
   final int counter;
@@ -19,9 +21,7 @@ class View extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
+      appBar: NavBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
