@@ -5,6 +5,8 @@ services:
     container_name: con_store_flutter
     volumes:
       - .:/home/developer/workspace/store_flutter
+    build: .
+    restart: always
     ports:
-      - 1234:1234
-    # command: ["flutter", "run", "-d", "web-server", "--web-port=1234"]
+      - "1234:1234"
+    command: "flutter pub get && flutter run -d web-server --web-port 8080 --web-hostname 0.0.0.0"

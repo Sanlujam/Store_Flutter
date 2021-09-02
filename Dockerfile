@@ -32,6 +32,7 @@ ENV PATH "$PATH:/home/developer/flutter/bin"
 # Enable flutter web
 RUN flutter channel stable
 RUN flutter upgrade
+RUN flutter config --enable-web
 
 #Copy project
 WORKDIR /home/developer/workspace/store_flutter
