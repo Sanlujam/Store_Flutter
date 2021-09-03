@@ -3,25 +3,25 @@ import 'package:flutter/material.dart';
 class SearchProductDelegate extends SearchDelegate {
   @override
   List<Widget> buildActions(BuildContext context) {
-    // TODO: implement buildActions
-    throw UnimplementedError();
+    return [
+      IconButton(icon: Icon(Icons.clear), onPressed: () => this.query = '')
+    ];
   }
 
   @override
   Widget buildLeading(BuildContext context) {
-    // TODO: implement buildLeading
-    throw UnimplementedError();
+    return IconButton(
+        icon: Icon(Icons.arrow_back_ios),
+        onPressed: () => this.close(context, null));
   }
 
   @override
   Widget buildResults(BuildContext context) {
-    // TODO: implement buildResults
-    throw UnimplementedError();
+    return Text('buildResults');
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    // TODO: implement buildSuggestions
-    throw UnimplementedError();
+    return Text('buildSuggestions');
   }
 }
