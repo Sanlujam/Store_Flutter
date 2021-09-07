@@ -4,21 +4,19 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'HomeView.dart';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+class Home extends StatefulWidget {
+  Home({Key? key}) : super(key: key);
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomeState createState() => _HomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var language = Provider.of<AppLocale>(context);
-    return View(
+    return HomeView(
       counter: _counter,
       increment: _incrementCounter,
-      title: widget.title,
       changeLenguage: _changeLenguage,
       language: language,
     );

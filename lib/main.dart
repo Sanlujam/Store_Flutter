@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:store/Routes/Index.dart';
+import 'package:store/routes/index.dart';
 import 'package:store/utils/ChangeLenguage.dart';
 import 'Pages/Home/Home.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -18,13 +18,13 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-          locale: locale.locale, // NEW
+          locale: locale.locale,
           title: 'Store Test',
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: MyHomePage(title: 'Store Test'),
-          routes: allRoutes,
+          home: Home(),
+          routes: routes,
           debugShowCheckedModeBanner: false,
         );
       }),
