@@ -1,6 +1,7 @@
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:store/utils/ChangeLenguage.dart';
+import 'package:store/widgets/DrawerMenu/DrawerMenu.dart';
 import 'package:store/widgets/NavBar/NavBar.dart';
 
 class HomeView extends StatelessWidget {
@@ -22,6 +23,7 @@ class HomeView extends StatelessWidget {
         preferredSize: const Size.fromHeight(60.0),
         child: NavBar(),
       ),
+      drawer: DrawerMenu(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

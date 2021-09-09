@@ -26,21 +26,32 @@ class View extends StatelessWidget {
           child: Form(
             key: formKey,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    TextFormField(
-                      validator: validateField,
-                      decoration: InputDecoration(labelText: 'Nickname'),
-                      onChanged: validate,
-                    ),
-                    TextFormField(
-                      decoration: InputDecoration(labelText: 'Password'),
-                    ),
-                  ],
+                Container(
+                  height: 300,
+                  width: 600,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      TextFormField(
+                        validator: validateField,
+                        decoration: InputDecoration(labelText: 'Nickname'),
+                        onChanged: validate,
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(labelText: 'Password'),
+                      ),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                            child: Text('Registrarse'), onPressed: onSubmit),
+                      )
+                    ],
+                  ),
                 ),
-                ElevatedButton(child: Text('Registrarse'), onPressed: onSubmit)
               ],
             ),
           ),

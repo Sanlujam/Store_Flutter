@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           locale: locale.locale,
-          title: 'Store Test',
+          title: 'Store',
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            primaryColor: Colors.yellow[400],
           ),
           home: Home(),
           routes: routes,
