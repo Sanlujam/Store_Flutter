@@ -33,18 +33,13 @@ module.exports = (plop) => {
     actions: [
       {
         type: "add",
-        path: "src/pages/{{pascalCase name}}/index.tsx",
-        templateFile: "plop_templates/Page.tsx.hbs",
+        path: "lib/pages/{{pascalCase name}}/{{pascalCase name}}.dart",
+        templateFile: "plop_templates/Page.dart.hbs",
       },
       {
         type: "add",
-        path: "src/pages/{{pascalCase name}}/hooks/index.ts",
-        templateFile: "plop_templates/PageHooks.ts.hbs",
-      },
-      {
-        type: "add",
-        path: "src/pages/{{pascalCase name}}/useEstilos.ts",
-        templateFile: "plop_templates/PageStyles.ts.hbs",
+        path: "lib/pages/{{pascalCase name}}/{{pascalCase name}}View.dart",
+        templateFile: "plop_templates/PageView.dart.hbs",
       },
     ],
   });
